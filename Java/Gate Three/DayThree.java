@@ -14,7 +14,6 @@ public class DayThree{
         int [] remainingNumbers = {10, 11};
 
     return remainingNumbers;
-
     }
 
     public static int [] addNegativeNumbersInTheEmptyBraces(int [] numbers){
