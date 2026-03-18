@@ -8,7 +8,7 @@ public class characterAndNumbers{
     
 
                 for(index = 0; index < word.length()-1; index ++){
-                        value = -1;
+                        value = 0;
 
                     for(int count = 0; count < word.length(); count ++){
                         if(word.charAt(index) == word.charAt(count)){
