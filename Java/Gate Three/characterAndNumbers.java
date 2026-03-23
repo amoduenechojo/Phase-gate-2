@@ -26,20 +26,20 @@
 
 public class CharacterAndNumbers {
 
-    public static String replacingLettersWithNumbers(String word) {
+    public static String countingNumbersOfAlphabets(String word) {
 
         String newWord = "";
         int count = 1;
 
         for (int index = 0; index < word.length(); index++) {
 
-            if (index < word.length() - 1 && 
-                word.charAt(index) == word.charAt(index + 1)) {
+            if (index < word.length() - 1 && word.charAt(index) == word.charAt(index + 1)) {
 
                 count++; // increase count if same as next character
 
-            } else {
+            } 
 
+            else {
                 newWord += word.charAt(index);
 
                 // Only add number if greater than 1 (based on your expected output)
