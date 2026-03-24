@@ -54,7 +54,6 @@ public class SImpleArithmeticApp{
                 eneCount++;
         }       
 
-    System.out.println("Your total score is " + result "over ten.");
     }  
 
 

@@ -1,35 +1,32 @@
-console.log("Enter your name: ");
+let name = prompt("Enter your name:");
+console.log("Welcome " + name);
 
+console.log("========== Subtraction Game ==========");
 
- console.log("Welcome " + name);
+let score = 0;
 
-    console.log("========== Subtraction Game ==========");
+for (let count = 0; count < 10; count++) {
 
-      let eneCount = 0;
+    let firstNumber = Math.floor(Math.random() * 70) + 50; 
+    let secondNumber = Math.floor(Math.random() * 50) + 1; 
 
-    for(let count = 0; count < 10; count++){
+    let correctAnswer = firstNumber - secondNumber;
 
-        let firstNumber = Math.floor(Math.random(1,200);
-//        let secondNumber = Math.floor(Math.random(1, 50)
+    let result = Number(prompt(firstNumber + " - " + secondNumber + " = "));
 
-    
-        console.log(firstNumber + " - " + secondNumber + " = ");
-        console.log("Enter your answer: ");
-       
-        if(result != (firstNumber - secondNumber)){
-        console.log("You have one more attempt.");
+    if (result !== correctAnswer) {
+        result = Number(prompt("Wrong! Try again:"));
 
-        console.log(firstNumber + " - " + secondNumber + " = ");
-        result = input.nextInt();
+        if (result === correctAnswer) {
+            console.log("Correct!");
+            score++;
+        } else {
+            console.log("Wrong again. Answer is: " + correctAnswer);
         }
+    } else {
+        console.log("Correct!");
+        score++;
+    }
+}
 
-        else if(result == firstNumber - secondNumber){
-            console.log(firstNumber - secondNumber);
-                eneCount++;
-        }       
-
-    console.log("Your total score is " , result "over ten");
-    }  
-
-
-
+console.log("Your total score is " + score + " over 10");

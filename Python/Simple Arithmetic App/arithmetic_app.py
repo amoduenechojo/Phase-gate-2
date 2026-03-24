@@ -1,28 +1,27 @@
 import random
 
-name = input(("Enter your name: "))
-print(name)
+name = input("Enter your name: ")
 print("Welcome " + name)
 print("========== Subtraction Game ==========")
 
-eneCount = 0
-result = 0
-attempt = 0
+score = 0
 
 for number in range(1, 11):
-   
-        first_number = random.randint(50 , 119)
-        second_number = random.randint(1, 50)
 
-        print(first_number , " - " , second_number , " = ")
-        result = input(("Enter your answer: "))
+    first_number = random.randint(50, 119)
+    second_number = random.randint(1, 50)
 
-#    while (attempt < 3):         
-        if first_number - second_number is not result:
-            result = input("Re enter your answer, you have one more attempt: ")
-            print(first_number - second_number)
+    correct_answer = first_number - second_number
 
-        else:
-            result == first_number - second_number
-            print(first_number - second_number)
-               eneCount++
+    print(first_number, "-", second_number, "=")
+    
+    result = int(input("Enter your answer: "))
+
+    if result != correct_answer:
+        result = int(input("Wrong! You have one more attempt: "))
+        
+        if result == correct_answer:
+            print("Correct!")
+            score += 1
+  
+print("Your final score is:", score)
