@@ -26,13 +26,13 @@ public class ParkingLot{
                     return parkingSpace;
                 }
             }
-        return -1;
+        return parkingSpace;
         }
 
     
-    public static String parkAtSlot(int [] parkingSpace, int [] slotNumber){
+    public static String parkAtSlot(int [] parkingSpace, int slotNumber){
 
-        if(slotNumber < 0 || slotNumber > 20){
+        if(slotNumber < 1 || slotNumber > 20){
             return "Invalid input.";
         }
 
@@ -66,13 +66,13 @@ public class ParkingLot{
     public static int [] displayParkingStatus(int [] slots){
 
         for(int count = 0; count < 20; count++){
-            if(count[slots] == 0){
+            if(slot[count] == 0){
                 return "The slot is" + count + slot + "is empty";
             } 
-            else if(count[slot] == 1){
+            else if(slot[count] == 1){
                 return "The slot is" + count + slot + "is filled.";
             }
-        }          
+        }             
     }
 
 }
