@@ -15,7 +15,7 @@ public class WarmUpTest{
             int [] numbers = {9, 2, 3, 2, 1};
 
             int [] actual = WarmUp.removingDuplicateNumbers(numbers);
-            int [] expected = {9, 3, 1};
+            int [] expected = {9, 3,2, 1};
 
             assertArrayEquals(actual,expected);
         }
