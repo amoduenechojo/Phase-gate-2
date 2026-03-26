@@ -7,76 +7,93 @@ public class GuessingGame{
 
         Random random = new Random();
 
-        targetNumber = random.nextInt(1, 100);
+        targetNumber = random.nextInt(100) + 1;
             return targetNumber;
     }
 
-    public static String controlOfAttempts(int usersAttempt, int maximumNumberOfAttempts, int usersAnswer){
+    public static String controlOfAttempts(int targetNumber){
 
        generateRandomNumber(targetNumber);    
 
-        usersAttempt = 0;
-        maximumNumberOfAttempts = 5;
-        usersAnswer = 0;
+        int usersAttempt = 0;
+        int maximumNumberOfAttempts = 5;
+       
 
             while (usersAttempt < maximumNumberOfAttempts){
-                return userAttempt;
-//                }
+
+                int userAnswer = getValidInput(input);
+                userAttempts++;
+
 
                 if(usersAnswer < targetNumber){
-                    System.out.print("Guess number is low.");
+                    System.out.print("Too low.");
                 }
                     if(usersAnswer > targetNumber){
-                        System.out.print("Guess number is high.");
+                        System.out.print("Too high");
                     }
-
-                        if(usersAnswer == targetNumber){
-            break;
-                        }
 
             
                 else {
-                System.out.println("Congratulations! You guessed the correct number.");
-                break;
+                System.out.println("corrrect.");
+                return userAttempts;
             }
         }
+        return userAttempts;
     }
 
-    public static String ValidateUsersInput(int userAnswer){
-        controlOfAttempts(usersAttempt, numberOfAttempt);
+    public static int getValidInput(Scanner input){
+        boolean isValid = false;
+        int usersAnswer = 0;
+    
+        while(!isValid){
 
-         Scanner input = new Scanner(System.in);
+            System.out.print("Enter your guess: ");
 
-            if (input.hasNextInt()){
-                usersAnswer = scanner.nextInt();
+            if (!input.hasNextInt()){
+                System.out.println("Invalid input. Enter a number: ");
+                input.next();
+                continue;
                 }
                 
-                if (usersAnswer < 1 || usersAnswer > 100){
-                    System.out.println("Your guess is out of bounds.");
-                    continue;
-            }
+            usersAnswer = input.nextInt();
+
+
+                if(usersAnswer >= 1 && usersAnswer <= 100){
+                    isValid = true;
+                }
+                    if (usersAnswer < 1 && usersAnswer > 100){
+                        System.out.println("Your guess is out of bounds.");                      
+                     }
+        }
+        
+        return usersAnswer;                    
     }
   
-   public static displayUsersRating(int usersAttempt){ 
+  public static String displayUsersRating(int usersAttempt, boolean hasWon){
+    String usersRating; 
 
-            if (usersAttempt == 1){
-                usersRating = "Legendary";
+        if(!hasWon){
+            usersRating = "Better luck next time!";
+        }
+
+            else if (usersAttempt == 1){
+            usersRating = "Legendary";
             } 
 
-                else if (usersAttempt == 2){
-                usersRating = "Excellent";
-                 } 
+            else if (usersAttempt == 2){
+            usersRating = "Excellent";
+            } 
 
-                else if (usersAttempt <= 4){
-                usersRating = "Good";
-                } 
+            else if (usersAttempt <= 4){
+            usersRating = "Good";
+            } 
 
-            else if (usersAttempt == 5){
-                usersRating = "Close!";
-                }
-//        return usersRating;
+        else(usersAttempt == 5){
+        usersRating = "Close!";
         }
-      return usersRating;
+
+            }   
+            return usersRating;
 
 
 

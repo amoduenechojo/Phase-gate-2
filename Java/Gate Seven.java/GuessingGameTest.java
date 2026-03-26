@@ -26,6 +26,22 @@ public class GuessingGameTest{
         }
 
 
+    @Test
+        public void testThatTheNumberOfQuestionsAttemptedIsFive(){
+        
+        
+
+
+
+
+
+
+
+
+
+    }
+
+
 
 
 
