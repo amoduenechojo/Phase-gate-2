@@ -61,9 +61,10 @@ public class ContactApp{
         System.out.print("Enter the phone number you want to remove: ");
         phoneNumber = input.nextLine();
         
-        if(phoneNumber ){
-            }
-        System.out.print("Contact successfully removed.");
+            for(int count = 0; count < 11; count++){
+                if(phoneNumber != count){
+                    }
+            System.out.print("Contact successfully removed.");
         return removeContact;
     }
 

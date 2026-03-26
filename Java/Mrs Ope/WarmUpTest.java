@@ -19,26 +19,4 @@ public class WarmUpTest{
 
             assertArrayEquals(actual,expected);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
